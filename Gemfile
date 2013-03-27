@@ -11,6 +11,8 @@ gem 'haml'
 gem 'haml-rails'
 gem 'bootstrap-sass-rails'
 gem 'simple_form'
+gem 'json'
+gem 'nokogiri'
 
 gem 'rabl'
 gem 'oj'

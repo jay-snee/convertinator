@@ -1,0 +1,18 @@
+.container
+	.row
+		.span12
+			.lead
+				Convertinator
+	.row
+		.span12
+			.form
+				= form_tag "/" do
+					= text_area :xml, :data, class: "span11"
+					%br
+					= submit_tag "Convertinate", class: "btn btn-primary"
+
+	- if @converted_json
+		.row
+			.span12
+				.well
+					= @converted_json
