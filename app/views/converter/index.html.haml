@@ -1,18 +1,40 @@
-.container
-	.row
-		.span12
-			.lead
-				Convertinator
-	.row
-		.span12
-			.form
-				= form_tag "/" do
-					= text_area :xml, :data, class: "span11"
-					%br
-					= submit_tag "Convertinate", class: "btn btn-primary"
 
-	- if @converted_json
-		.row
-			.span12
-				.well
-					= @converted_json
+.container
+	.form
+		= form_tag '/' do
+			.row
+				.span12
+					.lead
+						XML/KML to JSON Convertinator
+			.row
+				.span2
+					%b
+						1. Paste here
+						%i.icon-play
+				.span10
+					= text_area :xml, :data, class: "span10"
+			.row
+				.span2
+					%b
+						2. Press this
+						%i.icon-play
+				.span10
+					= submit_tag "Convertinate", class: "btn btn-success"
+
+			%h1
+			.row
+				.span2
+					%b 
+						3. Copy this
+						%i.icon-play
+
+				.span10
+					- if @converted_json
+						.well
+							= @converted_json
+
+.footer
+	%center
+		&copy 
+		%a{href: 'http://arcaneindustries.co.uk', target: 'new'} Arcane Industries Ltd
+		2013
